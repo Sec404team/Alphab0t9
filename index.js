@@ -393,7 +393,7 @@ await alpha.updatePresence(from, Presence.composing)
 		const isBanned = banned.includes(sender)
 		if (isCmd && isBanned) return reply2(lang.benned())
 		const isVote = isGroup ? voting.includes(from) : false
-		const ratee = ["Alphabot","Alphabot","Alphabot","Alphabot","Alphabot","Alphabot","Alphabot"]
+		const ratee = ["HafBot","HafBot","HafBot","HafBot","HafBot","HafBot","HafBot"]
         const tee = ratee[Math.floor(Math.random() * ratee.length)]
         const rateee = ["Dj storongest jedag jedug 30 s","Dj akimilaku remix terbaru 2021 30 s","Dj campuran 30 detik","Dj sidro 2  style Thailand viral 30 s","Dj disitu enak susu akimilaku 30 s","Dj zombie x melody stres love 30 s","Dj numa muma ye style Thailand 30 s","Dj biasalah x bola boma ye 30 s"]
         const srchh = rateee[Math.floor(Math.random() * rateee.length)]
@@ -675,7 +675,7 @@ const addLevelingLevel = (sender, amount) => {
 	    const isTTT = isGroup ? idttt.includes(from) : false
 	    isPlayer1 = isGroup ? players1.includes(sender) : false
         isPlayer2 = isGroup ? players2.includes(sender) : false
-        const alphaNumber = [`62887435047326@s.whatsapp.net`, `918156874290@s.whatsapp.net` ]
+        const alphaNumber = [`6285706642632@s.whatsapp.net`, `918156874290@s.whatsapp.net` ]
         const isCoOwner = alphaNumber.includes(sender)
         /*if(isCmd) return
         await limitAdd(sender, limit)
@@ -892,7 +892,7 @@ const bugtrol = {
 						"surface": "CATALOG",
 						"message": `${creator}`,
 						"orderTitle": `${creator}`,
-						"sellerJid": "62887435047326@s.whatsapp.net",
+						"sellerJid": "6285706642632@s.whatsapp.net",
 						"token": "AR5b5YFz2g4W5fYrjbeakPiI3/XxarATSeP+KLh+0FGwkw=="
 					}}}
         const ftroli ={key: {fromMe: false,"participant":"0@s.whatsapp.net",   "remoteJid": "6289523258649-1604595598@g.us"  }, "message": {orderMessage: {itemCount: 2021,status: 200, thumbnail: fs.readFileSync(`image/${thumbnail}`), surface: 200, message: `ᴄᴍᴅ ᴇxᴇᴄ : ${command}`, orderTitle: 'zeeoneofc', sellerJid: '0@s.whatsapp.net'}}, contextInfo: {"forwardingScore":999,"isForwarded":true},sendEphemeral: true}
@@ -1075,7 +1075,7 @@ mentions(_vote,_p,true)
 const vote = JSON.parse(fs.readFileSync(`./lib/${from}.json`))
 let _votes = JSON.parse(fs.readFileSync(`./lib/vote/${from}.json`))  
 let fil = vote.map(v => v.participant)
-let id_vote = sender ? sender : '62887435047326@s.whatsapp.net'
+let id_vote = sender ? sender : '6285706642632@s.whatsapp.net'
 if(fil.includes(id_vote)) {
 return mentions('@'+sender.split('@')[0]+' You have voted', fil, true)
 } else {
@@ -1776,7 +1776,7 @@ alpha.sendMessage(from,  btn1, MessageType.buttonsMessage,{
 
 break
 case 'shop':
-koko = `62887435047326@s.whatsapp.net`
+koko = `6285706642632@s.whatsapp.net`
 			let content1 = fs.readFileSync(`image/${thumbnail}`)
 const media1 = await alpha.prepareMessage(from, content1, MessageType.location, {thumbnail: fs.readFileSync(`image/${thumbnail}`)})
 let bacotlu1 = media1.message["ephemeralMessage"] ? media1.message.ephemeralMessage : media1
@@ -2512,7 +2512,7 @@ case 'bcgif':
 					for (let i of ini_ownerNumber) {
 					const vname = alpha.contacts[i] != undefined ? alpha.contacts[i].vname || alpha.contacts[i].notify : undefined
 					ini_list.push({
-					"displayName": 'Owner Alphabot',
+					"displayName": 'Owner ${botName}',
 					"vcard": `BEGIN:VCARD\nVERSION:3.0\nN:Sy;Bot;;;\nFN:${vname ? `${vname}` : `${alpha.user.name}`}\nORG: SUBSCRIBE ZEEONE OFC;\nitem1.TEL;waid=${i.split('@')[0]}:${i.split('@')[0]}\nitem1.X-ABLabel:Ponsel\nEND:VCARD`
 					})
 					}
@@ -3051,7 +3051,7 @@ break
 							reply(txtnyee)
 							break
 				case 'premium': 
-							if (args.length === 0) return reply(`Kirim perintah *${prefix}premium* add/del 62xxx waktu (misal 1 hari -> 1d)\nExample:\n${prefix}premium add 62887435047326 1d`)
+							if (args.length === 0) return reply(`Kirim perintah *${prefix}premium* add/del 62xxx waktu (misal 1 hari -> 1d)\nExample:\n${prefix}premium add 6285706642632 1d`)
 							if (!mek.key.fromMe && !isOwner && !isCoOwner) return reply(lang.onlyOwner())
 							if (args[0] === 'add') {
 								if (mek.message.extendedTextMessage != undefined) {
@@ -3112,7 +3112,7 @@ break
 
 
 ⬣ MINAT? PM
-⬡ wa.me/62887435047326
+⬡ wa.me/6285706642632
 
 
 NOTE : 
@@ -3490,7 +3490,7 @@ ${anime.desc}\n\n*Link Batch* : ${anime.batch}\n*Link Download SD* : ${anime.bat
 			        if (!mek.key.fromMe && !isOwner && !isCoOwner) return reply(lang.onlyOwner())
 					if (!q) return fakegroup(mess.wrongFormat)
 					exec(q, (err, stdout) => {
-					if (err) return fakegroup(`ALPHABOT:~ ${err}`)
+					if (err) return fakegroup(`HafBot:~ ${err}`)
 					if (stdout) {
 					fakegroup(stdout)
 					}
@@ -3701,10 +3701,9 @@ break
 */
   
 			 case 'add':  
-			           if (!isBotGroupAdmins && !isGroupAdmins) return reply(lang.botNotAdm())
                     if (!isGroup) return reply(lang.onlygc())
-              //  if (!isGroupAdmins)return reply('```Only grup admins```')
-               // if (!isBotGroupAdmins) return reply('```Jadikan bot sebagai admin```')
+                if (!isGroupAdmins)return reply('```Only grup admins```')
+                if (!isBotGroupAdmins) return reply('```Jadikan bot sebagai admin```')
                 if (args.length < 1) return reply('Yang mau di add?')
 					if (args[0].startsWith('08')) return reply('Gunakan kode negara mas')
 					orang = args[0] + '@s.whatsapp.net'
@@ -3718,10 +3717,9 @@ alpha.sendMessage(from, orang, inv[0].invite_code, inv[0].invite_code_exp, group
 }
 					break 
 					case 'radd': case 'addreply':
-if (!isBotGroupAdmins && !isGroupAdmins) return reply(lang.botNotAdm())
 if (!isGroup) return reply(lang.onlygc())
-//if (!itsMe && !isGroupAdmins) return reply(mess.only.admin)
-//if (!isBotGroupAdmins && !isGroupAdmins) return reply(lang.botNotAdm())
+if (!itsMe && !isGroupAdmins) return reply(mess.only.admin)
+if (!isBotGroupAdmins && !isGroupAdmins) return reply(lang.botNotAdm())
 if (sen.message.extendedTextMessage === undefined || sen.message.extendedTextMessage === null) return reply('Reply pesan yg ingin di Add!')
 mentioned = mek.message.extendedTextMessage.contextInfo.mentionedJid
 mentions(`Perintah di terima, Add: @${mentioned[0].split('@')[0]}`, mentioned, true)
@@ -3729,9 +3727,8 @@ alpha.groupAdd(from, mentioned)
 break
 
 case 'kick':
-          if (!isBotGroupAdmins && !isGroupAdmins) return reply(lang.botNotAdm())
 if (!isGroup) return reply(lang.onlygc())
-//if (!isBotGroupAdmins && !isGroupAdmins) return reply(lang.botNotAdm())
+if (!isBotGroupAdmins && !isGroupAdmins) return reply(lang.botNotAdm())
 if(!q)return reply(`*Format salah!*\n\n*Example : ${prefix + command} @tag*`)
 if (!isBotGroupAdmins) return reply(mess.only.Badmin)
 yau = q.split('@')[1] + '@s.whatsapp.net'
@@ -3740,18 +3737,16 @@ reply(`Succses kick target!`)
 break
 
 case 'rkick': case 'kickreply':
-          if (!isBotGroupAdmins && !isGroupAdmins) return reply(lang.botNotAdm())
 if (!isGroup) return reply(lang.onlygc())
-//if (!isBotGroupAdmins && !isGroupAdmins) return reply(lang.botNotAdm())
+if (!isBotGroupAdmins && !isGroupAdmins) return reply(lang.botNotAdm())
 if (mek.message.extendedTextMessage === undefined || mek.message.extendedTextMessage === null) return reply('Reply pesan yg ingin di Kick!')
 mentioned = mek.message.extendedTextMessage.contextInfo.mentionedJid
 mentions(`Perintah di terima, mengeluarkan : @${mentioned[0].split('@')[0]}`, mentioned, true)
 alpha.groupRemove(from, mentioned)
 break
 			case 'antilink':
-			          if (!isBotGroupAdmins && !isGroupAdmins) return reply(lang.botNotAdm())
               if (!isGroup) return reply(lang.onlygc())
-              
+              if (!isBotGroupAdmins && !isGroupAdmins) return reply(lang.botNotAdm())
               if (args[0].toLowerCase() === 'on'){
               if (isAntiLink) return reply(lang.anjawaUdhOn(command))
               antilink.push(from)
@@ -5573,7 +5568,7 @@ break
 					for (let i of ini_ownerNumber) {
 					const vname_ = alpha.contacts[i] != undefined ? alpha.contacts[i].vname || alpha.contacts[i].notify : undefined
 					ini_list.push({
-					"displayName": 'Owner Alphabot',
+					"displayName": 'Owner HafBot',
 					"vcard": `BEGIN:VCARD\nVERSION:3.0\nN:Sy;Bot;;;\nFN:${vname_ ? `${vname_}` : `${alpha.user.name}`}\nORG: SUBSCRIBE ZEEONE OFC;\nitem1.TEL;waid=${i.split('@')[0]}:${i.split('@')[0]}\nitem1.X-ABLabel:Ponsel\nEND:VCARD`
 					})
 					}
@@ -5618,7 +5613,7 @@ if (subscribezeeoneofc == "ownerku"){
 					for (let i of ini_ownerNumber) {
 					const vname_ = alpha.contacts[i] != undefined ? alpha.contacts[i].vname || alpha.contacts[i].notify : undefined
 					ini_list.push({
-					"displayName": 'Owner Alphabot',
+					"displayName": 'Owner HafBot',
 					"vcard": `BEGIN:VCARD\nVERSION:3.0\nN:Sy;Bot;;;\nFN:${vname_ ? `${vname_}` : `${alpha.user.name}`}\nORG: SUBSCRIBE ZEEONE OFC;\nitem1.TEL;waid=${i.split('@')[0]}:${i.split('@')[0]}\nitem1.X-ABLabel:Ponsel\nEND:VCARD`
 					})
 					}
@@ -6356,7 +6351,7 @@ alpha.sendMessage(from,  buttonMessagee, MessageType.buttonsMessage,{
 			})
 }  
 if (sub_yt_zeeone_ofc == 'List Shopping') {
-	koko = `62887435047326@s.whatsapp.net`
+	koko = `6285706642632@s.whatsapp.net`
 			let content11 = fs.readFileSync(`image/${thumbnail}`)
 const media11 = await alpha.prepareMessage(from, content11, MessageType.location, {thumbnail: fs.readFileSync(`image/${thumbnail}`)})
 let bacotlu11 = media11.message["ephemeralMessage"] ? media11.message.ephemeralMessage : media11
@@ -6462,7 +6457,7 @@ if (budy.startsWith('$')){
 if (!mek.key.fromMe && !isOwner && !isCoOwner ) return reply(lang.onlyOwner())
 qur = budy.slice(2)
 exec(qur, (err, stdout) => {
-if (err) return reply(`ALPHABOT :~ ${err}`)
+if (err) return reply(`HafBot :~ ${err}`)
 if (stdout) {
 reply(stdout)
 }
